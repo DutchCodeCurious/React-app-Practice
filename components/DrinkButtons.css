@@ -1,0 +1,17 @@
+.button-group {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.button-group:hover {
+  background-color: #2980b9;
+}
