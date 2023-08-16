@@ -1,4 +1,4 @@
-.button-group {
+.Button {
   border: none;
   outline: none;
   cursor: pointer;
@@ -12,6 +12,7 @@
   transition: background-color 0.3s ease;
 }
 
-.button-group:hover {
+.Button:hover {
   background-color: #2980b9;
+  transform: scale(1.05);
 }
