@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import { DrinkChoice } from "../components/DrinkChoice";
-import { DrinkSearch } from "../components/DrinkSearch";
+import { DrinkChoice } from "./components/DrinkChoice";
+import { DrinkSearch } from "./components/DrinkSearch";
 
 export const App = () => {
   const [userDrink, setUserDrink] = useState();
 
-  const resetUserDrink = () => {
-    setUserDrink(null);
-  };
+  //const resetUserDrink = () => {
+  //  setUserDrink(null);
+  //};
 
   const greeting = "Welcome!";
 
@@ -18,7 +18,7 @@ export const App = () => {
         <DrinkChoice
           drink={userDrink}
           clickFn={setUserDrink}
-          resetFn={resetUserDrink}
+          //resetFn={resetUserDrink}
         />
       ) : (
         <>

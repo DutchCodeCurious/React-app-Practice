@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { availableDrinks } from "../utils/data";
+import { availableDrinks } from "../../utils/data";
 import { DrinkList } from "./DrinkList";
 import { TextInput } from "./ui/TextInput";
 
