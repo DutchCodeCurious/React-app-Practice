@@ -3,16 +3,29 @@ import "./App.css";
 import { DrinkChoice } from "../components/DrinkChoice";
 import { DrinkSearch } from "../components/DrinkSearch";
 
-import { availableDrinks } from "../utils/data";
-
 export const App = () => {
   const [userDrink, setUserDrink] = useState();
-  const greeting = "Hello there!";
+
+  const resetUserDrink = () => {
+    setUserDrink(null);
+  };
+
+  const greeting = "Welcome!";
 
   return (
     <div className="app">
-      <h1>{greeting}</h1>
-      <DrinkSearch />
+      {userDrink ? (
+        <DrinkChoice
+          drink={userDrink}
+          clickFn={setUserDrink}
+          resetFn={resetUserDrink}
+        />
+      ) : (
+        <>
+          <h1>{greeting}</h1>
+          <DrinkSearch clickFn={setUserDrink} />
+        </>
+      )}
     </div>
   );
 };
