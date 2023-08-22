@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { availableDrinks } from "../utils/data";
+import { availableDrinks } from "../../utils/data.js";
 import { DrinkList } from "./DrinkList";
 import { TextInput } from "./ui/TextInput";
+import { Modal } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 
 export const DrinkSearch = ({ clickFn, changeFn }) => {
   const [searchField, setSearchField] = useState("");
@@ -14,7 +16,7 @@ export const DrinkSearch = ({ clickFn, changeFn }) => {
 
   return (
     <>
-      <label>Search for drinks:</label>
+      <Text>Search for drinks:</Text>
       <TextInput changeFn={handleChange} />
       <DrinkList clickFn={clickFn} drinks={matchedDrinks} />
     </>
